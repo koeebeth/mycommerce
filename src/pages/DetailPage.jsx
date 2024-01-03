@@ -4,8 +4,6 @@ import { cartActions } from "../store";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 
-//FIZ Z INDEX ON MODAL
-
 export default function DetailPage() {
     const params = useParams();
     const dispatch = useDispatch();
