@@ -1,11 +1,15 @@
 import { useCallback, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { authActions } from "../store";
+import { useDispatch } from "react-redux";
 
 export default function AuthPage() {
     const mode = useParams().mode;
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const handleGoogleAuthResponse = useCallback(function () {
+        dispatch(authActions.setAuthorize());
         navigate('/');
     }, [navigate])
 
